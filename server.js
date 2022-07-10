@@ -53,3 +53,11 @@ process.on('unhandledRejection', (err) => {
     process.exit(1);
   });
 });
+
+// Only required for HEROKU deployment
+process.on('SIGTERM', () => {
+  console.log('SIGTERM Received. Shutting down gracefully.');
+  server.close(() => {
+    console.log('💥 Process terminated!');
+  });
+});
