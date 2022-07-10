@@ -178,12 +178,12 @@ tourSchema.pre(/^find/, function (next) {
   next();
 });
 
-// QUERY MIDDLEWARE POST - Post middleware for all queries with find
-tourSchema.post(/^find/, function (docs, next) {
-  // eslint-disable-next-line no-console
-  console.log(`Query took ${Date.now() - this.start} milliseconds!`);
-  next();
-});
+// // QUERY MIDDLEWARE POST - Post middleware for all queries with find
+// tourSchema.post(/^find/, function (docs, next) {
+//   // eslint-disable-next-line no-console
+//   console.log(`Query took ${Date.now() - this.start} milliseconds!`);
+//   next();
+// });
 
 // AGGREGATION MIDDLEWARE PRE // this object points to aggregation
 // tourSchema.pre('aggregate', function (next) {

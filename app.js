@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const cors = require('cors');
 
 const AppError = require('./utils/appError');
@@ -89,6 +90,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 // Middleware to write to console
 // app.use((req, res, next) => {
