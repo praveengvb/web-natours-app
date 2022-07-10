@@ -19,7 +19,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 
-// Create app, Start Express app
+// Start Express app
 const app = express();
 
 // Define view engine for GUI
